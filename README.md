@@ -1,5 +1,7 @@
 # Food Ordering System – Yemek Sipariş Sistemi (Java Swing)
 
+![CI](https://github.com/emircankilicaslan/Food-Ordering-System/actions/workflows/ci.yml/badge.svg)
+
 Java ve nesne yönelimli programlama (OOP) ile geliştirilmiş, Swing arayüzlü masaüstü yemek sipariş uygulaması. Üç marka (Arby's, McDonald's, Burger King) için sipariş oluşturma, listeleme ve marka puanlama içerir.
 
 ## Özellikler
@@ -26,7 +28,7 @@ java -cp out BurgericiousMain
 ```
 
 ## Bilinen sınırlar
-Siparişler yalnızca bellekte tutulur (uygulama kapanınca kaybolur); otomatik test yoktur. Bir üniversite dersi için yazılmış öğrenci projesidir.
+Siparişler yalnızca bellekte tutulur (uygulama kapanınca kaybolur); otomatik test yoktur; CI her push'ta JDK 17 ve 21 ile derlemeyi doğrular. Bir üniversite dersi için yazılmış öğrenci projesidir.
 
 ---
 *Geliştirici: Emircan Kılıçaslan*
