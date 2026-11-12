@@ -3,7 +3,6 @@ import java.text.DecimalFormat;
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
-import sun.awt.resources.awt;
 
 
 /*

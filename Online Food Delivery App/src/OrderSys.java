@@ -12,7 +12,7 @@ public class OrderSys implements RateBrand {
         }
     }
 
-    private static Order searchOrder(int id) {
+    public static Order searchOrder(int id) {
         for (Order order : orderList) {
             if (order.getId() == id) {
                 return order;
