@@ -115,9 +115,6 @@ public class BurgerKing extends Order{
                 case "YIGIT10":
                     super.price *= 0.9;
                     break;
-                case "BILKENTSENATO2ARALIK":
-                    super.price *= 10;
-                    break;
             }
             
         }

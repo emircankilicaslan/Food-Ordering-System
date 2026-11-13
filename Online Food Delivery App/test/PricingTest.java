@@ -1,4 +1,5 @@
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import org.junit.jupiter.api.Test;
 
@@ -79,6 +80,15 @@ class PricingTest {
         o = burgerKing("King Chicken", "", "", "YIGIT10", "");
         o.calcFinalPrice();
         assertEquals(25 * 0.9, o.getPrice(), 1e-9);
+    }
+
+    @Test
+    void burgerKing_promosyonKoduFiyatiHicbirZamanArtirmaz() {
+        for (String kod : new String[] {"", "BORA30", "BEDIRHAN20", "YIGIT10", "BILKENTSENATO2ARALIK", "YOKBOYLEBIRKOD"}) {
+            BurgerKing o = burgerKing("100 Years", "", "", kod, "");
+            o.calcFinalPrice();
+            assertTrue(o.getPrice() <= 30 + 1e-9, "kod: " + kod);
+        }
     }
 
     @Test

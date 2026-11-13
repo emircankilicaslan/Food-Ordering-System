@@ -29,7 +29,7 @@ java -cp out BurgericiousMain
 
 ## Testler
 ```bash
-mvn test      # 16 test (JUnit 5)
+mvn test      # 17 test (JUnit 5)
 ```
 Maven yalnızca derleme ve test içindir; kaynak klasörü Eclipse düzeninde kaldı (`Online Food Delivery App/src`). Testler marka bazlı fiyat hesabını (menü, ekler, Burger King promosyon kodları) ve `OrderSys` deposunu (ekleme, yinelenen kimlik, arama, silme, marka ortalaması, puan verme) kapsar. CI her push ve pull request'te JDK 17 ve 21 ile `mvn verify` çalıştırır.
 
