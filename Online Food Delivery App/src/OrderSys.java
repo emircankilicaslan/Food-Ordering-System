@@ -31,7 +31,7 @@ public class OrderSys implements RateBrand {
 
     public static Order searchOrderByCustomerName(String customerName) {
         for (Order order : orderList) {
-            if (order.getCustomerName().equals(customerName)) {
+            if (customerName != null && customerName.equals(order.getCustomerName())) {
                 return order;
             }
         }
@@ -59,8 +59,8 @@ public class OrderSys implements RateBrand {
                 Arbys.rating += newRate;
                 break;
             case "McDonalds":
-                // McDonalds.rated++;
-                // McDonalds.rating+=newRate;
+                McDonalds.rated++;
+                McDonalds.rating += newRate;
                 break;
         }
     }

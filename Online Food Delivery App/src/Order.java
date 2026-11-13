@@ -122,14 +122,12 @@ public abstract class Order {
     
     public abstract void calcFinalPrice();
 
-	public Object getCustomerName() {
-		// TODO Auto-generated method stub
-		return null;
+	public String getCustomerName() {
+		return CustomerName;
 	}
 
 	public double getRating() {
-		// TODO Auto-generated method stub
-		return 0;
+		return Rating;
 	}
         
 }
