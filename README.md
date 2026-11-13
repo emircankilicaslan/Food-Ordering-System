@@ -27,8 +27,14 @@ javac -encoding UTF-8 -d out *.java
 java -cp out BurgericiousMain
 ```
 
+## Testler
+```bash
+mvn test      # 16 test (JUnit 5)
+```
+Maven yalnızca derleme ve test içindir; kaynak klasörü Eclipse düzeninde kaldı (`Online Food Delivery App/src`). Testler marka bazlı fiyat hesabını (menü, ekler, Burger King promosyon kodları) ve `OrderSys` deposunu (ekleme, yinelenen kimlik, arama, silme, marka ortalaması, puan verme) kapsar. CI her push ve pull request'te JDK 17 ve 21 ile `mvn verify` çalıştırır.
+
 ## Bilinen sınırlar
-Siparişler yalnızca bellekte tutulur (uygulama kapanınca kaybolur); otomatik test yoktur; CI her push'ta JDK 17 ve 21 ile derlemeyi doğrular. Nesne yönelimli programlama ilkelerini uygulamak amacıyla geliştirilmiş bir masaüstü uygulamasıdır.
+Siparişler yalnızca bellekte tutulur (uygulama kapanınca kaybolur); kalıcı depolama yoktur. Nesne yönelimli programlama ilkelerini uygulamak amacıyla geliştirilmiş bir masaüstü uygulamasıdır.
 
 
 ## Lisans

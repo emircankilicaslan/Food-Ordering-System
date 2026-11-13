@@ -6,7 +6,7 @@ on:
   pull_request:
 
 jobs:
-  derleme:
+  derleme-test:
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -17,6 +17,6 @@ jobs:
         with:
           distribution: temurin
           java-version: ${{ matrix.java }}
-      - name: Derle
-        working-directory: Online Food Delivery App/src
-        run: javac -encoding UTF-8 -d "$RUNNER_TEMP/out" *.java
+          cache: maven
+      - name: Derle ve test et
+        run: mvn -B verify
